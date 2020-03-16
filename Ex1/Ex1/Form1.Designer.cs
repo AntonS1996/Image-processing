@@ -206,7 +206,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Grayscale";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(493, 300);
+            this.chart1.Size = new System.Drawing.Size(493, 262);
             this.chart1.TabIndex = 14;
             this.chart1.Text = "chart1";
             // 

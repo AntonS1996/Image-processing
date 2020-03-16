@@ -84,6 +84,7 @@ namespace Ex1
         private void ShowResultImageButton_Click(object sender, EventArgs e)
         {
             pictureBox2.Image = bmp;
+            ChartButton.Enabled = true;
         }
 
         private void RButton_Click(object sender, EventArgs e)
