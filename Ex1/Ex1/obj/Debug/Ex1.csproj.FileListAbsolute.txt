@@ -27,3 +27,12 @@ C:\Users\Anton\ImgPrc\Image-processing\Ex1\Ex1\obj\Debug\Ex1.csproj.GenerateReso
 C:\Users\Anton\ImgPrc\Image-processing\Ex1\Ex1\obj\Debug\Ex1.csproj.CoreCompileInputs.cache
 C:\Users\Anton\ImgPrc\Image-processing\Ex1\Ex1\obj\Debug\Ex1.exe
 C:\Users\Anton\ImgPrc\Image-processing\Ex1\Ex1\obj\Debug\Ex1.pdb
+C:\Users\Anton\source\repos\Image-processing\Ex1\Ex1\bin\Debug\Ex1.exe.config
+C:\Users\Anton\source\repos\Image-processing\Ex1\Ex1\bin\Debug\Ex1.exe
+C:\Users\Anton\source\repos\Image-processing\Ex1\Ex1\bin\Debug\Ex1.pdb
+C:\Users\Anton\source\repos\Image-processing\Ex1\Ex1\obj\Debug\Ex1.csprojAssemblyReference.cache
+C:\Users\Anton\source\repos\Image-processing\Ex1\Ex1\obj\Debug\Ex1.Form1.resources
+C:\Users\Anton\source\repos\Image-processing\Ex1\Ex1\obj\Debug\Ex1.Properties.Resources.resources
+C:\Users\Anton\source\repos\Image-processing\Ex1\Ex1\obj\Debug\Ex1.csproj.GenerateResource.cache
+C:\Users\Anton\source\repos\Image-processing\Ex1\Ex1\obj\Debug\Ex1.exe
+C:\Users\Anton\source\repos\Image-processing\Ex1\Ex1\obj\Debug\Ex1.pdb

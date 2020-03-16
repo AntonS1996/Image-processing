@@ -127,7 +127,6 @@ namespace Ex1
             {
                 this.chart1.Series["Grayscale"].Points[i].Color = Color.FromArgb(i, i, i);
             }
-
         }
     }
 }
