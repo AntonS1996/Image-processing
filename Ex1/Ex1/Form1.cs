@@ -79,35 +79,35 @@ namespace Ex1
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ShowResultImageButton_Click(object sender, EventArgs e)
         {
             pictureBox2.Image = bmp;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void RButton_Click(object sender, EventArgs e)
         {
             i1 = (byte)trackBar1.Value;
             textBox1.Text = Convert.ToString(i1);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void GButton_Click(object sender, EventArgs e)
         {
             i2 = (byte)trackBar2.Value;
             textBox2.Text = Convert.ToString(i2);
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void BButton_Click(object sender, EventArgs e)
         {
             i3 = (byte)trackBar3.Value;
             textBox3.Text = Convert.ToString(i3);
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void LoadImageButton_Click(object sender, EventArgs e)
         {
             LoadImage(true);
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void ChartButton_Click(object sender, EventArgs e)
         {
             Bitmap I = (Bitmap)pictureBox2.Image;
             byte gray;

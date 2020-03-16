@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GrayScaleProcessButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ShowResultImageButton = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.trackBar3 = new System.Windows.Forms.TrackBar();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.RButton = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.GButton = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.BButton = new System.Windows.Forms.Button();
+            this.LoadImageButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.button7 = new System.Windows.Forms.Button();
+            this.ChartButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -68,6 +68,7 @@
             // 
             // GrayScaleProcessButton
             // 
+            this.GrayScaleProcessButton.Enabled = false;
             this.GrayScaleProcessButton.Location = new System.Drawing.Point(771, 35);
             this.GrayScaleProcessButton.Name = "GrayScaleProcessButton";
             this.GrayScaleProcessButton.Size = new System.Drawing.Size(75, 23);
@@ -76,21 +77,22 @@
             this.GrayScaleProcessButton.UseVisualStyleBackColor = true;
             this.GrayScaleProcessButton.Click += new System.EventHandler(this.GrayScaleProcessButton_Click);
             // 
-            // button2
+            // ShowResultImageButton
             // 
-            this.button2.Location = new System.Drawing.Point(771, 81);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Result";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ShowResultImageButton.Enabled = false;
+            this.ShowResultImageButton.Location = new System.Drawing.Point(771, 81);
+            this.ShowResultImageButton.Name = "ShowResultImageButton";
+            this.ShowResultImageButton.Size = new System.Drawing.Size(75, 23);
+            this.ShowResultImageButton.TabIndex = 2;
+            this.ShowResultImageButton.Text = "Result";
+            this.ShowResultImageButton.UseVisualStyleBackColor = true;
+            this.ShowResultImageButton.Click += new System.EventHandler(this.ShowResultImageButton_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Location = new System.Drawing.Point(12, 292);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(371, 260);
+            this.pictureBox2.Size = new System.Drawing.Size(371, 262);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -126,62 +128,65 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(479, 255);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(67, 20);
             this.textBox1.TabIndex = 7;
             // 
-            // button3
+            // RButton
             // 
-            this.button3.Location = new System.Drawing.Point(479, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(67, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Show";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.RButton.Location = new System.Drawing.Point(479, 12);
+            this.RButton.Name = "RButton";
+            this.RButton.Size = new System.Drawing.Size(67, 23);
+            this.RButton.TabIndex = 8;
+            this.RButton.Text = "Show";
+            this.RButton.UseVisualStyleBackColor = true;
+            this.RButton.Click += new System.EventHandler(this.RButton_Click);
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(572, 255);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(67, 20);
             this.textBox2.TabIndex = 9;
             // 
-            // button4
+            // GButton
             // 
-            this.button4.Location = new System.Drawing.Point(572, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(67, 23);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Show";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.GButton.Location = new System.Drawing.Point(572, 12);
+            this.GButton.Name = "GButton";
+            this.GButton.Size = new System.Drawing.Size(67, 23);
+            this.GButton.TabIndex = 10;
+            this.GButton.Text = "Show";
+            this.GButton.UseVisualStyleBackColor = true;
+            this.GButton.Click += new System.EventHandler(this.GButton_Click);
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(665, 255);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(67, 20);
             this.textBox3.TabIndex = 11;
             // 
-            // button5
+            // BButton
             // 
-            this.button5.Location = new System.Drawing.Point(665, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(67, 23);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Show";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.BButton.Location = new System.Drawing.Point(665, 12);
+            this.BButton.Name = "BButton";
+            this.BButton.Size = new System.Drawing.Size(67, 23);
+            this.BButton.TabIndex = 12;
+            this.BButton.Text = "Show";
+            this.BButton.UseVisualStyleBackColor = true;
+            this.BButton.Click += new System.EventHandler(this.BButton_Click);
             // 
-            // button6
+            // LoadImageButton
             // 
-            this.button6.Location = new System.Drawing.Point(771, 161);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Load";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.LoadImageButton.Location = new System.Drawing.Point(771, 161);
+            this.LoadImageButton.Name = "LoadImageButton";
+            this.LoadImageButton.Size = new System.Drawing.Size(75, 23);
+            this.LoadImageButton.TabIndex = 13;
+            this.LoadImageButton.Text = "Load";
+            this.LoadImageButton.UseVisualStyleBackColor = true;
+            this.LoadImageButton.Click += new System.EventHandler(this.LoadImageButton_Click);
             // 
             // openFileDialog1
             // 
@@ -189,51 +194,52 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(450, 292);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series1.Legend = "Legend1";
-            series1.Name = "Grayscale";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series2.Legend = "Legend1";
+            series2.Name = "Grayscale";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(493, 300);
             this.chart1.TabIndex = 14;
             this.chart1.Text = "chart1";
             // 
-            // button7
+            // ChartButton
             // 
-            this.button7.Location = new System.Drawing.Point(843, 251);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 15;
-            this.button7.Text = "Chart";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.ChartButton.Enabled = false;
+            this.ChartButton.Location = new System.Drawing.Point(832, 251);
+            this.ChartButton.Name = "ChartButton";
+            this.ChartButton.Size = new System.Drawing.Size(75, 23);
+            this.ChartButton.TabIndex = 15;
+            this.ChartButton.Text = "Chart";
+            this.ChartButton.UseVisualStyleBackColor = true;
+            this.ChartButton.Click += new System.EventHandler(this.ChartButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 697);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.ChartButton);
             this.Controls.Add(this.chart1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.LoadImageButton);
+            this.Controls.Add(this.BButton);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.GButton);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.RButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.trackBar3);
             this.Controls.Add(this.trackBar2);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ShowResultImageButton);
             this.Controls.Add(this.GrayScaleProcessButton);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
@@ -254,21 +260,21 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button GrayScaleProcessButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ShowResultImageButton;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.TrackBar trackBar2;
         private System.Windows.Forms.TrackBar trackBar3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button RButton;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button GButton;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button BButton;
+        private System.Windows.Forms.Button LoadImageButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button ChartButton;
     }
 }
 
