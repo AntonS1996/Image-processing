@@ -32,7 +32,7 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.GrayScaleProcessButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
@@ -66,15 +66,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // GrayScaleProcessButton
             // 
-            this.button1.Location = new System.Drawing.Point(771, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Process";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.GrayScaleProcessButton.Location = new System.Drawing.Point(771, 35);
+            this.GrayScaleProcessButton.Name = "GrayScaleProcessButton";
+            this.GrayScaleProcessButton.Size = new System.Drawing.Size(75, 23);
+            this.GrayScaleProcessButton.TabIndex = 1;
+            this.GrayScaleProcessButton.Text = "Process";
+            this.GrayScaleProcessButton.UseVisualStyleBackColor = true;
+            this.GrayScaleProcessButton.Click += new System.EventHandler(this.GrayScaleProcessButton_Click);
             // 
             // button2
             // 
@@ -234,7 +234,7 @@
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.GrayScaleProcessButton);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -253,7 +253,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button GrayScaleProcessButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TrackBar trackBar1;

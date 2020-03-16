@@ -17,32 +17,37 @@ namespace Ex1
             InitializeComponent();
         }
 
-        Bitmap bmp = new Bitmap("C:\\Users\\Anton\\ImgPrc\\Image-processing\\Ex1\\Izmaylovo.bmp");
+        // Bitmap bmp = new Bitmap("C:\\Users\\Anton\\source\\repos\\K-means\\Izmaylovo_2014.bmp");
+        Bitmap bmp = null;
         byte i1, i2, i3;
         Image MemForImage;
 
-        
+
+
         private void LoadImage(bool Bmp)
         {
-            openFileDialog1.InitialDirectory = "C:\\Users\\Anton\\ImgPrc\\Image-processing\\Ex1";
+            // openFileDialog1.InitialDirectory = "C:\\Users\\Anton\\source\\repos\\K-means";
+            openFileDialog1.InitialDirectory = "";
+
             if (Bmp)
                 openFileDialog1.Filter = "image (BMP) files (*.bmp)|*.bmp|All files (*.*)|*.*";
-            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
                     MemForImage = Image.FromFile(openFileDialog1.FileName);
                     pictureBox1.Image = MemForImage;
                     bmp = (Bitmap)pictureBox1.Image;
+                    GrayScaleProcessButton.Enabled = true;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Cannot load a file: " + ex.Message);
+                    MessageBox.Show("Не удалось загрузить файл: " + ex.Message);
                 }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void GrayScaleProcessButton_Click(object sender, EventArgs e)
         {
             Bitmap bmp = (Bitmap)pictureBox1.Image;
             double N1, N2, N3;
