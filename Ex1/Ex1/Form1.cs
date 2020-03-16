@@ -51,9 +51,9 @@ namespace Ex1
         {
             Bitmap bmp = (Bitmap)pictureBox1.Image;
             double N1, N2, N3;
-            N1 = trackBar1.Value;
-            N2 = trackBar2.Value;
-            N3 = trackBar3.Value;
+            N1 = RTrackBar.Value;
+            N2 = GTrackBar.Value;
+            N3 = BTrackBar.Value;
             bool ok = true;
             if (N1 == 0 && N2 == 0 && N3 == 0)
                 ok = false;
@@ -66,17 +66,19 @@ namespace Ex1
                     r = col.R;
                     g = col.G;
                     b = col.B;
-                    // Standart formula for conversion:
-                    // byte gray = (byte)(0.3 * r + 0.59 * g + 0.11 * b);
                     byte gray;
-                    // Formula using input coefficients:
+
                     if (ok)
+                        // Formula using input coefficients:
                         gray = (byte)((N1 / (N1 + N2 + N3)) * r + (N2 / (N1 + N2 + N3)) * g + (N3 / (N1 + N2 + N3)) * b);
                     else
-                        gray = (byte)(N1 * r + N2 * g + N3 * b);
+                        // Standart formula for conversion:
+                        // byte gray = (byte)(0.3 * r + 0.59 * g + 0.11 * b);
+                        gray = (byte)(0.3 * r + 0.59 * g + 0.11 * b);
                     bmp.SetPixel(x, y, Color.FromArgb(gray, gray, gray));
                 }
             }
+            ShowResultImageButton.Enabled = true;
         }
 
         private void ShowResultImageButton_Click(object sender, EventArgs e)
@@ -86,19 +88,19 @@ namespace Ex1
 
         private void RButton_Click(object sender, EventArgs e)
         {
-            i1 = (byte)trackBar1.Value;
+            i1 = (byte)RTrackBar.Value;
             textBox1.Text = Convert.ToString(i1);
         }
 
         private void GButton_Click(object sender, EventArgs e)
         {
-            i2 = (byte)trackBar2.Value;
+            i2 = (byte)GTrackBar.Value;
             textBox2.Text = Convert.ToString(i2);
         }
 
         private void BButton_Click(object sender, EventArgs e)
         {
-            i3 = (byte)trackBar3.Value;
+            i3 = (byte)BTrackBar.Value;
             textBox3.Text = Convert.ToString(i3);
         }
 

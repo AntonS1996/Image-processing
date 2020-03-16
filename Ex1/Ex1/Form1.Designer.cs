@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GrayScaleProcessButton = new System.Windows.Forms.Button();
             this.ShowResultImageButton = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.trackBar3 = new System.Windows.Forms.TrackBar();
+            this.RTrackBar = new System.Windows.Forms.TrackBar();
+            this.GTrackBar = new System.Windows.Forms.TrackBar();
+            this.BTrackBar = new System.Windows.Forms.TrackBar();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.RButton = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -50,9 +50,9 @@
             this.ChartButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,32 +97,32 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // trackBar1
+            // RTrackBar
             // 
-            this.trackBar1.Location = new System.Drawing.Point(501, 35);
-            this.trackBar1.Maximum = 255;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(45, 214);
-            this.trackBar1.TabIndex = 4;
+            this.RTrackBar.Location = new System.Drawing.Point(501, 35);
+            this.RTrackBar.Maximum = 255;
+            this.RTrackBar.Name = "RTrackBar";
+            this.RTrackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.RTrackBar.Size = new System.Drawing.Size(45, 214);
+            this.RTrackBar.TabIndex = 4;
             // 
-            // trackBar2
+            // GTrackBar
             // 
-            this.trackBar2.Location = new System.Drawing.Point(594, 35);
-            this.trackBar2.Maximum = 255;
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar2.Size = new System.Drawing.Size(45, 214);
-            this.trackBar2.TabIndex = 5;
+            this.GTrackBar.Location = new System.Drawing.Point(594, 35);
+            this.GTrackBar.Maximum = 255;
+            this.GTrackBar.Name = "GTrackBar";
+            this.GTrackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.GTrackBar.Size = new System.Drawing.Size(45, 214);
+            this.GTrackBar.TabIndex = 5;
             // 
-            // trackBar3
+            // BTrackBar
             // 
-            this.trackBar3.Location = new System.Drawing.Point(687, 35);
-            this.trackBar3.Maximum = 255;
-            this.trackBar3.Name = "trackBar3";
-            this.trackBar3.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar3.Size = new System.Drawing.Size(45, 214);
-            this.trackBar3.TabIndex = 6;
+            this.BTrackBar.Location = new System.Drawing.Point(687, 35);
+            this.BTrackBar.Maximum = 255;
+            this.BTrackBar.Name = "BTrackBar";
+            this.BTrackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.BTrackBar.Size = new System.Drawing.Size(45, 214);
+            this.BTrackBar.TabIndex = 6;
             // 
             // textBox1
             // 
@@ -194,18 +194,18 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(450, 292);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series2.Legend = "Legend1";
-            series2.Name = "Grayscale";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series1.Legend = "Legend1";
+            series1.Name = "Grayscale";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(493, 300);
             this.chart1.TabIndex = 14;
             this.chart1.Text = "chart1";
@@ -235,9 +235,9 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.RButton);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.trackBar3);
-            this.Controls.Add(this.trackBar2);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.BTrackBar);
+            this.Controls.Add(this.GTrackBar);
+            this.Controls.Add(this.RTrackBar);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.ShowResultImageButton);
             this.Controls.Add(this.GrayScaleProcessButton);
@@ -247,9 +247,9 @@
             this.Text = "Image processing";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,9 +262,9 @@
         private System.Windows.Forms.Button GrayScaleProcessButton;
         private System.Windows.Forms.Button ShowResultImageButton;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.TrackBar trackBar2;
-        private System.Windows.Forms.TrackBar trackBar3;
+        private System.Windows.Forms.TrackBar RTrackBar;
+        private System.Windows.Forms.TrackBar GTrackBar;
+        private System.Windows.Forms.TrackBar BTrackBar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button RButton;
         private System.Windows.Forms.TextBox textBox2;
