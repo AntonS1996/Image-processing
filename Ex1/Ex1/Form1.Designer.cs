@@ -31,10 +31,10 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.GrayScaleProcessButton = new System.Windows.Forms.Button();
+            this.LoadedPictureBox = new System.Windows.Forms.PictureBox();
+            this.GrayscaleProcessButton = new System.Windows.Forms.Button();
             this.ShowResultImageButton = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ProcessedPictureBox = new System.Windows.Forms.PictureBox();
             this.RTrackBar = new System.Windows.Forms.TrackBar();
             this.GTrackBar = new System.Windows.Forms.TrackBar();
             this.BTrackBar = new System.Windows.Forms.TrackBar();
@@ -46,36 +46,36 @@
             this.BButton = new System.Windows.Forms.Button();
             this.LoadImageButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.GrayscaleChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ChartButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadedPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProcessedPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrayscaleChart)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // LoadedPictureBox
             // 
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(371, 262);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.LoadedPictureBox.InitialImage = null;
+            this.LoadedPictureBox.Location = new System.Drawing.Point(12, 12);
+            this.LoadedPictureBox.Name = "LoadedPictureBox";
+            this.LoadedPictureBox.Size = new System.Drawing.Size(371, 262);
+            this.LoadedPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LoadedPictureBox.TabIndex = 0;
+            this.LoadedPictureBox.TabStop = false;
             // 
-            // GrayScaleProcessButton
+            // GrayscaleProcessButton
             // 
-            this.GrayScaleProcessButton.Enabled = false;
-            this.GrayScaleProcessButton.Location = new System.Drawing.Point(771, 35);
-            this.GrayScaleProcessButton.Name = "GrayScaleProcessButton";
-            this.GrayScaleProcessButton.Size = new System.Drawing.Size(75, 23);
-            this.GrayScaleProcessButton.TabIndex = 1;
-            this.GrayScaleProcessButton.Text = "Process";
-            this.GrayScaleProcessButton.UseVisualStyleBackColor = true;
-            this.GrayScaleProcessButton.Click += new System.EventHandler(this.GrayScaleProcessButton_Click);
+            this.GrayscaleProcessButton.Enabled = false;
+            this.GrayscaleProcessButton.Location = new System.Drawing.Point(771, 35);
+            this.GrayscaleProcessButton.Name = "GrayscaleProcessButton";
+            this.GrayscaleProcessButton.Size = new System.Drawing.Size(75, 23);
+            this.GrayscaleProcessButton.TabIndex = 1;
+            this.GrayscaleProcessButton.Text = "Process";
+            this.GrayscaleProcessButton.UseVisualStyleBackColor = true;
+            this.GrayscaleProcessButton.Click += new System.EventHandler(this.GrayscaleProcessButton_Click);
             // 
             // ShowResultImageButton
             // 
@@ -88,14 +88,14 @@
             this.ShowResultImageButton.UseVisualStyleBackColor = true;
             this.ShowResultImageButton.Click += new System.EventHandler(this.ShowResultImageButton_Click);
             // 
-            // pictureBox2
+            // ProcessedPictureBox
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(12, 292);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(371, 262);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.ProcessedPictureBox.Location = new System.Drawing.Point(12, 292);
+            this.ProcessedPictureBox.Name = "ProcessedPictureBox";
+            this.ProcessedPictureBox.Size = new System.Drawing.Size(371, 262);
+            this.ProcessedPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ProcessedPictureBox.TabIndex = 3;
+            this.ProcessedPictureBox.TabStop = false;
             // 
             // RTrackBar
             // 
@@ -192,23 +192,23 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // chart1
+            // GrayscaleChart
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.GrayscaleChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(450, 292);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
+            this.GrayscaleChart.Legends.Add(legend1);
+            this.GrayscaleChart.Location = new System.Drawing.Point(450, 292);
+            this.GrayscaleChart.Name = "GrayscaleChart";
+            this.GrayscaleChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
             series1.Legend = "Legend1";
             series1.Name = "Grayscale";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(493, 262);
-            this.chart1.TabIndex = 14;
-            this.chart1.Text = "chart1";
+            this.GrayscaleChart.Series.Add(series1);
+            this.GrayscaleChart.Size = new System.Drawing.Size(493, 262);
+            this.GrayscaleChart.TabIndex = 14;
+            this.GrayscaleChart.Text = "chart1";
             // 
             // ChartButton
             // 
@@ -227,7 +227,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 697);
             this.Controls.Add(this.ChartButton);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.GrayscaleChart);
             this.Controls.Add(this.LoadImageButton);
             this.Controls.Add(this.BButton);
             this.Controls.Add(this.textBox3);
@@ -238,19 +238,19 @@
             this.Controls.Add(this.BTrackBar);
             this.Controls.Add(this.GTrackBar);
             this.Controls.Add(this.RTrackBar);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.ProcessedPictureBox);
             this.Controls.Add(this.ShowResultImageButton);
-            this.Controls.Add(this.GrayScaleProcessButton);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.GrayscaleProcessButton);
+            this.Controls.Add(this.LoadedPictureBox);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Image processing";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadedPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProcessedPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrayscaleChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,10 +258,10 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button GrayScaleProcessButton;
+        private System.Windows.Forms.PictureBox LoadedPictureBox;
+        private System.Windows.Forms.Button GrayscaleProcessButton;
         private System.Windows.Forms.Button ShowResultImageButton;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox ProcessedPictureBox;
         private System.Windows.Forms.TrackBar RTrackBar;
         private System.Windows.Forms.TrackBar GTrackBar;
         private System.Windows.Forms.TrackBar BTrackBar;
@@ -273,7 +273,7 @@
         private System.Windows.Forms.Button BButton;
         private System.Windows.Forms.Button LoadImageButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart GrayscaleChart;
         private System.Windows.Forms.Button ChartButton;
     }
 }

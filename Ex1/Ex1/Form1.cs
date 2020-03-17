@@ -36,9 +36,9 @@ namespace Ex1
                 try
                 {
                     MemForImage = Image.FromFile(openFileDialog1.FileName);
-                    pictureBox1.Image = MemForImage;
-                    bmp = (Bitmap)pictureBox1.Image;
-                    GrayScaleProcessButton.Enabled = true;
+                    LoadedPictureBox.Image = MemForImage;
+                    bmp = (Bitmap)LoadedPictureBox.Image;
+                    GrayscaleProcessButton.Enabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -47,9 +47,9 @@ namespace Ex1
             }
         }
 
-        private void GrayScaleProcessButton_Click(object sender, EventArgs e)
+        private void GrayscaleProcessButton_Click(object sender, EventArgs e)
         {
-            Bitmap bmp = (Bitmap)pictureBox1.Image;
+            Bitmap bmp = (Bitmap)LoadedPictureBox.Image;
             double N1, N2, N3;
             N1 = RTrackBar.Value;
             N2 = GTrackBar.Value;
@@ -83,7 +83,7 @@ namespace Ex1
 
         private void ShowResultImageButton_Click(object sender, EventArgs e)
         {
-            pictureBox2.Image = bmp;
+            ProcessedPictureBox.Image = bmp;
             ChartButton.Enabled = true;
         }
 
@@ -112,7 +112,7 @@ namespace Ex1
 
         private void ChartButton_Click(object sender, EventArgs e)
         {
-            Bitmap I = (Bitmap)pictureBox2.Image;
+            Bitmap I = (Bitmap)ProcessedPictureBox.Image;
             byte gray;
             int[] X = new int[256];
             for (int i = 0; i < 256; i++)
@@ -128,12 +128,11 @@ namespace Ex1
                     H[gray]++;
                 }
             }
-            
 
-            this.chart1.Series["Grayscale"].Points.DataBindXY(X, H);
+            this.GrayscaleChart.Series["Grayscale"].Points.DataBindXY(X, H);
             for (int i = 0; i < 256; i++)
             {
-                this.chart1.Series["Grayscale"].Points[i].Color = Color.FromArgb(i, i, i);
+                this.GrayscaleChart.Series["Grayscale"].Points[i].Color = Color.FromArgb(i, i, i);
             }
         }
     }
