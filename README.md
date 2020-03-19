@@ -23,4 +23,4 @@ This program is written using .NET Framework.
 
 <p><strong>So here is the final result:</strong></p>
 
-<p><img src="Screenshots/Result.png"></p>
+<p><img src="Ex1/Screenshots/Result.png"></p>
