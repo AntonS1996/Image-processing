@@ -1,5 +1,5 @@
 # Image-processing
-Digital image processing on C# (desktop application)
+Digital image processing on C#/.NET (desktop application)
 
 This program is written using .NET Framework.
 
